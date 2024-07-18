@@ -10,6 +10,7 @@ import {
   PoToolbarModule,  
 } from '@po-ui/ng-components';
 import { ParentsComponent } from './parents/parents.component';
+// import { ModuleRouterModule } from './module-router/module-router.module';
 
 
 @Component({
@@ -22,8 +23,8 @@ import { ParentsComponent } from './parents/parents.component';
     PoMenuModule,
     PoPageModule,
     HttpClientModule,
-    ParentsComponent
-
+    ParentsComponent,
+  //  ModuleRouterModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
@@ -31,6 +32,8 @@ import { ParentsComponent } from './parents/parents.component';
 export class AppComponent {
   readonly menus: Array<PoMenuItem> = [
     { label: 'Home', action: this.onClick.bind(this) },
+    { label: 'Teste', link: 'test' },
+    { label: 'Section', link: 'section'}
   ];
 
   clickOnButton() {
